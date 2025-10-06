@@ -149,7 +149,7 @@ const Services = () => {
               Empowering brands through design, technology, and creativity.
             </p>
             <Link
-              to="/booking"
+              to="/contact"
               className="inline-flex items-center bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 btn-glow animate-fade-in animation-delay-200"
             >
               Book a Service

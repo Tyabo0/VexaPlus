@@ -64,14 +64,14 @@ const Booking = () => {
                 className="glassmorphism p-6 text-center animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-psyco-green-DEFAULT mb-4 flex justify-center">
+                <div className="text-vexa-orange-DEFAULT mb-4 flex justify-center">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-medium text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
                 
                 {index < bookingSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-psyco-green-DEFAULT/50">
+                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-vexa-orange-DEFAULT/50">
                     <MoveRight size={24} />
                   </div>
                 )}
@@ -151,57 +151,57 @@ const Booking = () => {
           <div className="glassmorphism p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Need to Speak With Us Directly?</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Want to Talk With Our Team?</h2>
                 <p className="text-gray-300 mb-6">
-                  If you have specific questions or prefer to discuss your requirements over the phone, our team is here to help.
+                  Have a project in mind or need a custom solution? Our experts are ready to discuss your goals and ideas.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">+44 123 456 7890</span>
+                    <Phone className="h-5 w-5 text-vexa-orange-DEFAULT" />
+                    <span className="text-white">+213 561 303 266</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">booking@psycotikcrew.com</span>
+                    <Mail className="h-5 w-5 text-vexa-orange-DEFAULT" />
+                    <span className="text-white">contact@vexaplus.com</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <Clock className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">Mon-Fri: 9am-6pm | Sat: 10am-4pm</span>
+                    <Clock className="h-5 w-5 text-vexa-orange-DEFAULT" />
+                    <span className="text-white">Mon–Fri: 9am–6pm | Sat: 10am–4pm</span>
                   </div>
                 </div>
               </div>
               
               <div className="flex flex-col justify-center space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-vexa-orange-DEFAULT/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-vexa-orange-DEFAULT" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Emergency Support</h3>
-                    <p className="text-gray-300">24/7 support line for existing bookings</p>
+                    <h3 className="text-lg font-medium text-white mb-1">Project Support</h3>
+                    <p className="text-gray-300">Our team assists you through every project stage.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-vexa-orange-DEFAULT/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-vexa-orange-DEFAULT" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Custom Packages</h3>
-                    <p className="text-gray-300">Speak with our team about bespoke solutions</p>
+                    <h3 className="text-lg font-medium text-white mb-1">Tailored Solutions</h3>
+                    <p className="text-gray-300">We adapt each service to your brand's unique needs.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-vexa-orange-DEFAULT/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-vexa-orange-DEFAULT" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Site Visits</h3>
-                    <p className="text-gray-300">Request a venue assessment before your event</p>
+                    <h3 className="text-lg font-medium text-white mb-1">Free Consultations</h3>
+                    <p className="text-gray-300">Book a strategy call to define your digital roadmap.</p>
                   </div>
                 </div>
               </div>

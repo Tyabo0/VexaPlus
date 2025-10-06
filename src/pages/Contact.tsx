@@ -14,7 +14,7 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -27,14 +27,54 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      // Send form data using Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "9b1ed113-b385-43a2-b5e7-cf9c1e97a0c5",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: "New Contact Form Submission - Vexa Plus",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        // Reset form
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast({
+        title: "Failed to Send",
+        description: "Something went wrong. Please try again or email us directly at contact@vexaplus.com",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -154,7 +194,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Phone</h3>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+213 (0) 561303266</p>
                   </div>
                 </div>
               </div>
@@ -177,7 +217,7 @@ const Contact = () => {
                 <h3 className="text-lg font-medium text-white mb-3">Business Hours</h3>
                 <div className="space-y-2 text-gray-300">
                   <p className="flex justify-between">
-                    <span>Monday - Friday:</span>
+                    <span>Sunday - Thursday:</span>
                     <span>9:00 AM - 6:00 PM</span>
                   </p>
                   <p className="flex justify-between">
@@ -185,7 +225,7 @@ const Contact = () => {
                     <span>10:00 AM - 4:00 PM</span>
                   </p>
                   <p className="flex justify-between">
-                    <span>Sunday:</span>
+                    <span>Friday:</span>
                     <span>Closed</span>
                   </p>
                 </div>

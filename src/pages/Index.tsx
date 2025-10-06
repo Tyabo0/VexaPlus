@@ -28,15 +28,14 @@ const Index = () => {
       title: "Social Media Management",
       description: "Engage your audience and grow your brand with strategic social media campaigns.",
       icon: <Share2 size={24} />,
-      imageSrc: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=80",
       link: "/services#social"
     }
   ];
 
   const stats = [
-    { number: "100+", label: "Projects Completed" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "5+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "5+", label: "Happy Clients" },
     { number: "24/7", label: "Support" }
   ];
 
@@ -47,7 +46,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-16 px-6 md:px-12 bg-vexa-black-light border-y border-vexa-orange-DEFAULT/10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div 
                 key={index}
